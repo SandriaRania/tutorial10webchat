@@ -138,14 +138,14 @@ impl Component for Chat {
     fn view(&self, ctx: &Context<Self>) -> Html {
         let submit = ctx.link().callback(|_| Msg::SubmitMessage);
 
-        html! {
+        html! {<div style="background-color: #152338;">
             <div class="flex w-screen">
-                <div class="flex-none w-56 h-screen bg-gray-100">
+                <div class="flex-none w-56 h-screen bg-blue-100">
                     <div class="text-xl p-3">{"Users"}</div>
                     {
                         self.users.clone().iter().map(|u| {
                             html!{
-                                <div class="flex m-3 bg-white rounded-lg p-2">
+                                <div class="flex m-3 bg-blue rounded-lg p-2">
                                     <div>
                                         <img class="w-12 h-12 rounded-full" src={u.avatar.clone()} alt="avatar"/>
                                     </div>
@@ -153,7 +153,7 @@ impl Component for Chat {
                                         <div class="flex text-xs justify-between">
                                             <div>{u.name.clone()}</div>
                                         </div>
-                                        <div class="text-xs text-gray-400">
+                                        <div class="text-xs text-black-400">
                                             {"Hi there!"}
                                         </div>
                                     </div>
@@ -163,7 +163,7 @@ impl Component for Chat {
                     }
                 </div>
                 <div class="grow h-screen flex flex-col">
-                    <div class="w-full h-14 border-b-2 border-gray-300"><div class="text-xl p-3">{"💬 Chat!"}</div></div>
+                    <div class="w-full h-14 border-b-2 border-gray-300"><div class="text-xl text-white p-3">{"💬 Chat!"}</div></div>
                     <div class="w-full grow overflow-auto border-b-2 border-gray-300">
                         {
                             self.messages.iter().map(|m| {
@@ -198,6 +198,7 @@ impl Component for Chat {
                         </button>
                     </div>
                 </div>
+            </div>
             </div>
         }
     }

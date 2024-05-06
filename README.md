@@ -6,5 +6,10 @@
 <img src="images/Screenshot (471).png">
 <img src="images/Screenshot (472).png">
 
-2. 
+2.  Put it in your Readme.md and provide some text to explain what you are doing.
+
+<img src="images/Screenshot (473).png">
+<img src="images/Screenshot (474).png">
+
+Saya merubah warna beberapa elemen dan background dari warna aslinya.
     
